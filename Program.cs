@@ -1,0 +1,30 @@
+using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using TodoApi.Data;
+using TodoApi.Extensions;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContextPool<AppDbContext>(options =>
+	options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString), mysqlOptions =>
+	{
+		mysqlOptions.EnableRetryOnFailure(maxRetryCount: 3);
+	}));
+
+var app = builder.Build();
+
+app.UseGlobalExceptionHandler();
+
+if (app.Environment.IsDevelopment())
+{
+	app.UseSwagger();
+	app.UseSwaggerUI();
+}
+
+app.MapGroup("/api").RegisterAllEndpoints();
+
+app.Run();
