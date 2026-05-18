@@ -7,6 +7,7 @@ public class AppDbContext : DbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
+    // Schema definitions
     public DbSet<TodoItem> Todos => Set<TodoItem>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

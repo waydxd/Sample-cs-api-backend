@@ -14,6 +14,10 @@ Minimal ASP.NET Core API for managing todo items, backed by MySQL and Entity Fra
 - .NET 10 SDK
 - MySQL server
 
+```bash
+dotnet tool install --global dotnet-ef
+```
+
 ## Getting started
 
 1. Update the connection string in `appsettings.json`:
