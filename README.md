@@ -71,3 +71,16 @@ Base path: `/api`
 
 - `POST /todos` rejects empty titles with `400`.
 - `CreatedAt` is set to UTC when the item is created.
+
+## Project structure
+
+- `appsettings.json`, `appsettings.Development.json`: Configuration files (connection strings, logging, environment settings).
+- `Program.cs`: Application entrypoint and service configuration (EF Core, Swagger, middleware).
+- `TodoApi.csproj`: Project file listing target framework and NuGet dependencies.
+- `Data/`: Database-related code, including `AppDbContext.cs` (EF Core DbContext).
+- `Endpoints/`: Minimal API endpoint modules (e.g. `TodoEndpoints.cs`) that register routes.
+- `Extensions/`: Extension methods for ASP.NET Core (global error handler, endpoint registration helpers).
+- `Models/`: Domain models and data transfer objects. Contains `Entities/` (e.g. `TodoItem.cs`) and `DTOs/`.
+- `Properties/`: Project properties and launch settings (`launchSettings.json`).
+- `bin/`, `obj/`: Build output and intermediate files produced by the SDK.
+
