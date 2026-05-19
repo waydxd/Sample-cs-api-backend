@@ -14,7 +14,10 @@ public class BookEndpoints : IEndpointModule
         var group = endpoints.MapGroup("/books").WithTags("Book Management");
 
         group.MapGet("/", GetBooksAsync);
+        group.MapGet("/search", SearchBooksGetAsync);
+        group.MapPost("/search", SearchBooksPostAsync);
         group.MapPost("/", CreateBookAsync);
+        group.MapGet("/{id:long}", GetBookByIdAsync);
         group.MapPut("/{id:long}", UpdateBookAsync);
         group.MapDelete("/{id:long}", DeleteBookAsync);
     }
@@ -24,6 +27,14 @@ public class BookEndpoints : IEndpointModule
         var books = await db.Books.AsNoTracking().ToListAsync();
         return Results.Ok(books);
     }
+    private static async Task<IResult> GetBookByIdAsync(long id, AppDbContext db)
+{
+    var book = await db.Books.FindAsync(id);
+
+    return book is not null 
+        ? Results.Ok(book) 
+        : Results.NotFound($"Book with ID {id} not found.");
+}
 
     private static async Task<IResult> CreateBookAsync(
         CreateBookDto dto,
@@ -70,6 +81,58 @@ public class BookEndpoints : IEndpointModule
         await db.SaveChangesAsync();
 
         return Results.Ok(book);
+    }
+
+    private static async Task<IResult> SearchBooksGetAsync(
+        string? countryCode,
+        DateTime? publishDateNotLaterThan,
+        DateTime? publishDateNotEarlierThan,
+        long? category,
+        string? name,
+        AppDbContext db)
+    {
+        var request = new BookSearchRequest(countryCode, publishDateNotLaterThan, publishDateNotEarlierThan, category, name, null);
+        var query = ApplySearchFilters(db.Books.AsNoTracking(), request);
+        var results = await query.ToListAsync();
+        return Results.Ok(results);
+    }
+
+    private static async Task<IResult> SearchBooksPostAsync(
+        BookSearchRequest request,
+        IValidator<BookSearchRequest> validator,
+        AppDbContext db)
+    {
+        var validationResult = await validator.ValidateAsync(request);
+        if (!validationResult.IsValid)
+            return Results.ValidationProblem(validationResult.ToDictionary());
+
+        var query = ApplySearchFilters(db.Books.AsNoTracking(), request);
+
+        if (request.Filter is not null)
+            query = query.Where(FilterExpressionBuilder.Build<BookItem>(request.Filter));
+
+        var results = await query.ToListAsync();
+        return Results.Ok(results);
+    }
+
+    private static IQueryable<BookItem> ApplySearchFilters(IQueryable<BookItem> query, BookSearchRequest request)
+    {
+        if (request.CountryCode is not null)
+            query = query.Where(b => b.CountryCode == request.CountryCode);
+
+        if (request.PublishDateNotLaterThan is not null)
+            query = query.Where(b => b.PublishDate <= request.PublishDateNotLaterThan.Value);
+
+        if (request.PublishDateNotEarlierThan is not null)
+            query = query.Where(b => b.PublishDate >= request.PublishDateNotEarlierThan.Value);
+
+        if (request.Category is not null)
+            query = query.Where(b => b.Category == request.Category.Value);
+
+        if (request.Name is not null)
+            query = query.Where(b => b.Name.Contains(request.Name));
+
+        return query;
     }
 
     private static async Task<IResult> DeleteBookAsync(long id, AppDbContext db)
