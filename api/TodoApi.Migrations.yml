@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: TodoApi.Migrations
+  commentId: N:TodoApi.Migrations
+  id: TodoApi.Migrations
+  children:
+  - TodoApi.Migrations.AddBooks
+  - TodoApi.Migrations.InitialCreate
+  langs:
+  - csharp
+  - vb
+  name: TodoApi.Migrations
+  nameWithType: TodoApi.Migrations
+  fullName: TodoApi.Migrations
+  type: Namespace
+  assemblies:
+  - TodoApi
+references:
+- uid: TodoApi.Migrations.InitialCreate
+  commentId: T:TodoApi.Migrations.InitialCreate
+  href: TodoApi.Migrations.InitialCreate.html
+  name: InitialCreate
+  nameWithType: InitialCreate
+  fullName: TodoApi.Migrations.InitialCreate
+- uid: TodoApi.Migrations.AddBooks
+  commentId: T:TodoApi.Migrations.AddBooks
+  href: TodoApi.Migrations.AddBooks.html
+  name: AddBooks
+  nameWithType: AddBooks
+  fullName: TodoApi.Migrations.AddBooks

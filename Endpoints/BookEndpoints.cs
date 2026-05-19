@@ -8,6 +8,7 @@ using FluentValidation;
 
 namespace TodoApi.Endpoints;
 
+/// <summary>Minimal API module for managing books under the /api/books route.</summary>
 public class BookEndpoints : IEndpointModule
 {
     public void RegisterEndpoints(IEndpointRouteBuilder endpoints)
@@ -23,20 +24,24 @@ public class BookEndpoints : IEndpointModule
         group.MapDelete("/{id:long}", DeleteBookAsync);
     }
 
+    /// <summary>Returns all books.</summary>
     private static async Task<IResult> GetBooksAsync(AppDbContext db)
     {
         var books = await db.Books.AsNoTracking().ToListAsync();
         return Results.Ok(books);
     }
+
+    /// <summary>Returns a single book by its ID, or 404 if not found.</summary>
     private static async Task<IResult> GetBookByIdAsync(long id, AppDbContext db)
-{
-    var book = await db.Books.FindAsync(id);
+    {
+        var book = await db.Books.FindAsync(id);
 
-    return book is not null 
-        ? Results.Ok(book) 
-        : Results.NotFound($"Book with ID {id} not found.");
-}
+        return book is not null
+            ? Results.Ok(book)
+            : Results.NotFound($"Book with ID {id} not found.");
+    }
 
+    /// <summary>Creates a new book after validating the input DTO.</summary>
     private static async Task<IResult> CreateBookAsync(
         CreateBookDto dto,
         IValidator<CreateBookDto> validator,
@@ -60,6 +65,7 @@ public class BookEndpoints : IEndpointModule
         return Results.Created($"/books/{book.Id}", book);
     }
 
+    /// <summary>Updates an existing book by ID after validating the input DTO.</summary>
     private static async Task<IResult> UpdateBookAsync(
         long id,
         UpdateBookDto dto,
@@ -84,6 +90,7 @@ public class BookEndpoints : IEndpointModule
         return Results.Ok(book);
     }
 
+    /// <summary>Searches books using query-string parameters (flat filters only).</summary>
     private static async Task<IResult> SearchBooksGetAsync(
         string? countryCode,
         DateTime? publishDateNotLaterThan,
@@ -98,6 +105,10 @@ public class BookEndpoints : IEndpointModule
         return Results.Ok(results);
     }
 
+    /// <summary>
+    /// Searches books using a JSON body. Supports flat fields and an optional
+    /// nested <see cref="FilterSpecification"/> tree for dynamic expression-based filtering.
+    /// </summary>
     private static async Task<IResult> SearchBooksPostAsync(
         HttpContext httpContext,
         AppDbContext db)
@@ -119,6 +130,7 @@ public class BookEndpoints : IEndpointModule
         if (request is null)
             return Results.BadRequest(new { detail = "Request body cannot be empty." });
 
+        // Validate using the registered FluentValidation validator.
         var validator = httpContext.RequestServices.GetRequiredService<IValidator<BookSearchRequest>>();
         var validationResult = await validator.ValidateAsync(request);
         if (!validationResult.IsValid)
@@ -126,6 +138,7 @@ public class BookEndpoints : IEndpointModule
 
         var query = ApplySearchFilters(db.Books.AsNoTracking(), request);
 
+        // Apply the dynamic filter tree if provided.
         if (request.Filter is not null)
             query = query.Where(FilterExpressionBuilder.Build<BookItem>(request.Filter));
 
@@ -133,6 +146,7 @@ public class BookEndpoints : IEndpointModule
         return Results.Ok(results);
     }
 
+    /// <summary>Applies flat (non-dynamic) search filters to the book query based on the request.</summary>
     private static IQueryable<BookItem> ApplySearchFilters(IQueryable<BookItem> query, BookSearchRequest request)
     {
         if (request.CountryCode is not null)
@@ -153,6 +167,7 @@ public class BookEndpoints : IEndpointModule
         return query;
     }
 
+    /// <summary>Deletes a book by ID, returning 204 No Content or 404 if not found.</summary>
     private static async Task<IResult> DeleteBookAsync(long id, AppDbContext db)
     {
         var book = await db.Books.FindAsync(id);

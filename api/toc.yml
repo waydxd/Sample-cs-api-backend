@@ -1,0 +1,94 @@
+### YamlMime:TableOfContent
+items:
+- uid: TodoApi.Data
+  name: TodoApi.Data
+  type: Namespace
+  items:
+  - uid: TodoApi.Data.AppDbContext
+    name: AppDbContext
+    type: Class
+- uid: TodoApi.Endpoints
+  name: TodoApi.Endpoints
+  type: Namespace
+  items:
+  - uid: TodoApi.Endpoints.BookEndpoints
+    name: BookEndpoints
+    type: Class
+  - uid: TodoApi.Endpoints.TodoEndpoints
+    name: TodoEndpoints
+    type: Class
+- uid: TodoApi.Extensions
+  name: TodoApi.Extensions
+  type: Namespace
+  items:
+  - uid: TodoApi.Extensions.AspNetCoreExtensions
+    name: AspNetCoreExtensions
+    type: Class
+  - uid: TodoApi.Extensions.EndpointExtensions
+    name: EndpointExtensions
+    type: Class
+  - uid: TodoApi.Extensions.FilterExpressionBuilder
+    name: FilterExpressionBuilder
+    type: Class
+  - uid: TodoApi.Extensions.IEndpointModule
+    name: IEndpointModule
+    type: Interface
+- uid: TodoApi.Migrations
+  name: TodoApi.Migrations
+  type: Namespace
+  items:
+  - uid: TodoApi.Migrations.AddBooks
+    name: AddBooks
+    type: Class
+  - uid: TodoApi.Migrations.InitialCreate
+    name: InitialCreate
+    type: Class
+- uid: TodoApi.Models.DTOs
+  name: TodoApi.Models.DTOs
+  type: Namespace
+  items:
+  - uid: TodoApi.Models.DTOs.BookSearchRequest
+    name: BookSearchRequest
+    type: Class
+  - uid: TodoApi.Models.DTOs.ComparisonOperator
+    name: ComparisonOperator
+    type: Enum
+  - uid: TodoApi.Models.DTOs.Condition
+    name: Condition
+    type: Class
+  - uid: TodoApi.Models.DTOs.CreateBookDto
+    name: CreateBookDto
+    type: Class
+  - uid: TodoApi.Models.DTOs.FilterOperator
+    name: FilterOperator
+    type: Enum
+  - uid: TodoApi.Models.DTOs.FilterSpecification
+    name: FilterSpecification
+    type: Class
+  - uid: TodoApi.Models.DTOs.UpdateBookDto
+    name: UpdateBookDto
+    type: Class
+- uid: TodoApi.Models.Entities
+  name: TodoApi.Models.Entities
+  type: Namespace
+  items:
+  - uid: TodoApi.Models.Entities.BookItem
+    name: BookItem
+    type: Class
+  - uid: TodoApi.Models.Entities.TodoItem
+    name: TodoItem
+    type: Class
+- uid: TodoApi.Validators
+  name: TodoApi.Validators
+  type: Namespace
+  items:
+  - uid: TodoApi.Validators.BookSearchRequestValidator
+    name: BookSearchRequestValidator
+    type: Class
+  - uid: TodoApi.Validators.CreateBookDtoValidator
+    name: CreateBookDtoValidator
+    type: Class
+  - uid: TodoApi.Validators.UpdateBookDtoValidator
+    name: UpdateBookDtoValidator
+    type: Class
+memberLayout: SamePage

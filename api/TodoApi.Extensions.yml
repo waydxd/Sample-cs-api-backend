@@ -1,0 +1,67 @@
+### YamlMime:ManagedReference
+items:
+- uid: TodoApi.Extensions
+  commentId: N:TodoApi.Extensions
+  id: TodoApi.Extensions
+  children:
+  - TodoApi.Extensions.AspNetCoreExtensions
+  - TodoApi.Extensions.EndpointExtensions
+  - TodoApi.Extensions.FilterExpressionBuilder
+  - TodoApi.Extensions.IEndpointModule
+  langs:
+  - csharp
+  - vb
+  name: TodoApi.Extensions
+  nameWithType: TodoApi.Extensions
+  fullName: TodoApi.Extensions
+  type: Namespace
+  assemblies:
+  - TodoApi
+references:
+- uid: TodoApi.Extensions.AspNetCoreExtensions
+  commentId: T:TodoApi.Extensions.AspNetCoreExtensions
+  href: TodoApi.Extensions.AspNetCoreExtensions.html
+  name: AspNetCoreExtensions
+  nameWithType: AspNetCoreExtensions
+  fullName: TodoApi.Extensions.AspNetCoreExtensions
+- uid: TodoApi.Extensions.IEndpointModule
+  commentId: T:TodoApi.Extensions.IEndpointModule
+  parent: TodoApi.Extensions
+  href: TodoApi.Extensions.IEndpointModule.html
+  name: IEndpointModule
+  nameWithType: IEndpointModule
+  fullName: TodoApi.Extensions.IEndpointModule
+- uid: TodoApi.Extensions.EndpointExtensions
+  commentId: T:TodoApi.Extensions.EndpointExtensions
+  href: TodoApi.Extensions.EndpointExtensions.html
+  name: EndpointExtensions
+  nameWithType: EndpointExtensions
+  fullName: TodoApi.Extensions.EndpointExtensions
+- uid: TodoApi.Extensions.FilterExpressionBuilder
+  commentId: T:TodoApi.Extensions.FilterExpressionBuilder
+  href: TodoApi.Extensions.FilterExpressionBuilder.html
+  name: FilterExpressionBuilder
+  nameWithType: FilterExpressionBuilder
+  fullName: TodoApi.Extensions.FilterExpressionBuilder
+- uid: TodoApi.Extensions
+  commentId: N:TodoApi.Extensions
+  href: TodoApi.html
+  name: TodoApi.Extensions
+  nameWithType: TodoApi.Extensions
+  fullName: TodoApi.Extensions
+  spec.csharp:
+  - uid: TodoApi
+    name: TodoApi
+    href: TodoApi.html
+  - name: .
+  - uid: TodoApi.Extensions
+    name: Extensions
+    href: TodoApi.Extensions.html
+  spec.vb:
+  - uid: TodoApi
+    name: TodoApi
+    href: TodoApi.html
+  - name: .
+  - uid: TodoApi.Extensions
+    name: Extensions
+    href: TodoApi.Extensions.html

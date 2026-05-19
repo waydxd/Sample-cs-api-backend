@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: TodoApi.Models.Entities
+  commentId: N:TodoApi.Models.Entities
+  id: TodoApi.Models.Entities
+  children:
+  - TodoApi.Models.Entities.BookItem
+  - TodoApi.Models.Entities.TodoItem
+  langs:
+  - csharp
+  - vb
+  name: TodoApi.Models.Entities
+  nameWithType: TodoApi.Models.Entities
+  fullName: TodoApi.Models.Entities
+  type: Namespace
+  assemblies:
+  - TodoApi
+references:
+- uid: TodoApi.Models.Entities.BookItem
+  commentId: T:TodoApi.Models.Entities.BookItem
+  href: TodoApi.Models.Entities.BookItem.html
+  name: BookItem
+  nameWithType: BookItem
+  fullName: TodoApi.Models.Entities.BookItem
+- uid: TodoApi.Models.Entities.TodoItem
+  commentId: T:TodoApi.Models.Entities.TodoItem
+  href: TodoApi.Models.Entities.TodoItem.html
+  name: TodoItem
+  nameWithType: TodoItem
+  fullName: TodoApi.Models.Entities.TodoItem

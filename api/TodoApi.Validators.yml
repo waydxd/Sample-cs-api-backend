@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: TodoApi.Validators
+  commentId: N:TodoApi.Validators
+  id: TodoApi.Validators
+  children:
+  - TodoApi.Validators.BookSearchRequestValidator
+  - TodoApi.Validators.CreateBookDtoValidator
+  - TodoApi.Validators.UpdateBookDtoValidator
+  langs:
+  - csharp
+  - vb
+  name: TodoApi.Validators
+  nameWithType: TodoApi.Validators
+  fullName: TodoApi.Validators
+  type: Namespace
+  assemblies:
+  - TodoApi
+references:
+- uid: TodoApi.Validators.BookSearchRequestValidator
+  commentId: T:TodoApi.Validators.BookSearchRequestValidator
+  href: TodoApi.Validators.BookSearchRequestValidator.html
+  name: BookSearchRequestValidator
+  nameWithType: BookSearchRequestValidator
+  fullName: TodoApi.Validators.BookSearchRequestValidator
+- uid: TodoApi.Validators.CreateBookDtoValidator
+  commentId: T:TodoApi.Validators.CreateBookDtoValidator
+  href: TodoApi.Validators.CreateBookDtoValidator.html
+  name: CreateBookDtoValidator
+  nameWithType: CreateBookDtoValidator
+  fullName: TodoApi.Validators.CreateBookDtoValidator
+- uid: TodoApi.Validators.UpdateBookDtoValidator
+  commentId: T:TodoApi.Validators.UpdateBookDtoValidator
+  href: TodoApi.Validators.UpdateBookDtoValidator.html
+  name: UpdateBookDtoValidator
+  nameWithType: UpdateBookDtoValidator
+  fullName: TodoApi.Validators.UpdateBookDtoValidator

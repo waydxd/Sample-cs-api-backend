@@ -5,6 +5,7 @@ using TodoApi.Models.Entities;
 
 namespace TodoApi.Endpoints;
 
+/// <summary>Minimal API module for managing to-do items under the /api/todos route.</summary>
 public class TodoEndpoints : IEndpointModule
 {
     public void RegisterEndpoints(IEndpointRouteBuilder endpoints)
@@ -15,12 +16,14 @@ public class TodoEndpoints : IEndpointModule
         group.MapPost("/", CreateTodoAsync);
     }
 
+    /// <summary>Returns all to-do items.</summary>
     private static async Task<IResult> GetTodosAsync(AppDbContext db)
     {
         var todos = await db.Todos.AsNoTracking().ToListAsync();
         return Results.Ok(todos);
     }
 
+    /// <summary>Creates a new to-do item. Requires a non-empty title.</summary>
     private static async Task<IResult> CreateTodoAsync(TodoItem todo, AppDbContext db)
     {
         if (string.IsNullOrWhiteSpace(todo.Title))

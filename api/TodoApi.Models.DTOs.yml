@@ -1,0 +1,98 @@
+### YamlMime:ManagedReference
+items:
+- uid: TodoApi.Models.DTOs
+  commentId: N:TodoApi.Models.DTOs
+  id: TodoApi.Models.DTOs
+  children:
+  - TodoApi.Models.DTOs.BookSearchRequest
+  - TodoApi.Models.DTOs.ComparisonOperator
+  - TodoApi.Models.DTOs.Condition
+  - TodoApi.Models.DTOs.CreateBookDto
+  - TodoApi.Models.DTOs.FilterOperator
+  - TodoApi.Models.DTOs.FilterSpecification
+  - TodoApi.Models.DTOs.UpdateBookDto
+  langs:
+  - csharp
+  - vb
+  name: TodoApi.Models.DTOs
+  nameWithType: TodoApi.Models.DTOs
+  fullName: TodoApi.Models.DTOs
+  type: Namespace
+  assemblies:
+  - TodoApi
+references:
+- uid: TodoApi.Models.DTOs.BookSearchRequest
+  commentId: T:TodoApi.Models.DTOs.BookSearchRequest
+  href: TodoApi.Models.DTOs.BookSearchRequest.html
+  name: BookSearchRequest
+  nameWithType: BookSearchRequest
+  fullName: TodoApi.Models.DTOs.BookSearchRequest
+- uid: TodoApi.Models.DTOs.CreateBookDto
+  commentId: T:TodoApi.Models.DTOs.CreateBookDto
+  href: TodoApi.Models.DTOs.CreateBookDto.html
+  name: CreateBookDto
+  nameWithType: CreateBookDto
+  fullName: TodoApi.Models.DTOs.CreateBookDto
+- uid: TodoApi.Models.DTOs.FilterOperator
+  commentId: T:TodoApi.Models.DTOs.FilterOperator
+  parent: TodoApi.Models.DTOs
+  href: TodoApi.Models.DTOs.FilterOperator.html
+  name: FilterOperator
+  nameWithType: FilterOperator
+  fullName: TodoApi.Models.DTOs.FilterOperator
+- uid: TodoApi.Models.DTOs.ComparisonOperator
+  commentId: T:TodoApi.Models.DTOs.ComparisonOperator
+  parent: TodoApi.Models.DTOs
+  href: TodoApi.Models.DTOs.ComparisonOperator.html
+  name: ComparisonOperator
+  nameWithType: ComparisonOperator
+  fullName: TodoApi.Models.DTOs.ComparisonOperator
+- uid: TodoApi.Models.DTOs.FilterSpecification
+  commentId: T:TodoApi.Models.DTOs.FilterSpecification
+  parent: TodoApi.Models.DTOs
+  href: TodoApi.Models.DTOs.FilterSpecification.html
+  name: FilterSpecification
+  nameWithType: FilterSpecification
+  fullName: TodoApi.Models.DTOs.FilterSpecification
+- uid: TodoApi.Models.DTOs.Condition
+  commentId: T:TodoApi.Models.DTOs.Condition
+  href: TodoApi.Models.DTOs.Condition.html
+  name: Condition
+  nameWithType: Condition
+  fullName: TodoApi.Models.DTOs.Condition
+- uid: TodoApi.Models.DTOs.UpdateBookDto
+  commentId: T:TodoApi.Models.DTOs.UpdateBookDto
+  href: TodoApi.Models.DTOs.UpdateBookDto.html
+  name: UpdateBookDto
+  nameWithType: UpdateBookDto
+  fullName: TodoApi.Models.DTOs.UpdateBookDto
+- uid: TodoApi.Models.DTOs
+  commentId: N:TodoApi.Models.DTOs
+  href: TodoApi.html
+  name: TodoApi.Models.DTOs
+  nameWithType: TodoApi.Models.DTOs
+  fullName: TodoApi.Models.DTOs
+  spec.csharp:
+  - uid: TodoApi
+    name: TodoApi
+    href: TodoApi.html
+  - name: .
+  - uid: TodoApi.Models
+    name: Models
+    href: TodoApi.Models.html
+  - name: .
+  - uid: TodoApi.Models.DTOs
+    name: DTOs
+    href: TodoApi.Models.DTOs.html
+  spec.vb:
+  - uid: TodoApi
+    name: TodoApi
+    href: TodoApi.html
+  - name: .
+  - uid: TodoApi.Models
+    name: Models
+    href: TodoApi.Models.html
+  - name: .
+  - uid: TodoApi.Models.DTOs
+    name: DTOs
+    href: TodoApi.Models.DTOs.html

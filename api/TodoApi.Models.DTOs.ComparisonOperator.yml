@@ -1,0 +1,271 @@
+### YamlMime:ManagedReference
+items:
+- uid: TodoApi.Models.DTOs.ComparisonOperator
+  commentId: T:TodoApi.Models.DTOs.ComparisonOperator
+  id: ComparisonOperator
+  parent: TodoApi.Models.DTOs
+  children:
+  - TodoApi.Models.DTOs.ComparisonOperator.Contains
+  - TodoApi.Models.DTOs.ComparisonOperator.Equals
+  - TodoApi.Models.DTOs.ComparisonOperator.GreaterThan
+  - TodoApi.Models.DTOs.ComparisonOperator.GreaterThanOrEqual
+  - TodoApi.Models.DTOs.ComparisonOperator.LessThan
+  - TodoApi.Models.DTOs.ComparisonOperator.LessThanOrEqual
+  - TodoApi.Models.DTOs.ComparisonOperator.NotEquals
+  langs:
+  - csharp
+  - vb
+  name: ComparisonOperator
+  nameWithType: ComparisonOperator
+  fullName: TodoApi.Models.DTOs.ComparisonOperator
+  type: Enum
+  source:
+    remote:
+      path: Models/DTOs/FilterSpecification.cs
+      branch: master
+      repo: https://github.com/waydxd/sample-cs-api-backend
+    id: ComparisonOperator
+    path: Models/DTOs/FilterSpecification.cs
+    startLine: 14
+  assemblies:
+  - TodoApi
+  namespace: TodoApi.Models.DTOs
+  summary: Comparison operators for individual filter conditions.
+  example: []
+  syntax:
+    content: public enum ComparisonOperator
+    content.vb: Public Enum ComparisonOperator
+- uid: TodoApi.Models.DTOs.ComparisonOperator.Equals
+  commentId: F:TodoApi.Models.DTOs.ComparisonOperator.Equals
+  id: Equals
+  parent: TodoApi.Models.DTOs.ComparisonOperator
+  langs:
+  - csharp
+  - vb
+  name: Equals
+  nameWithType: ComparisonOperator.Equals
+  fullName: TodoApi.Models.DTOs.ComparisonOperator.Equals
+  type: Field
+  source:
+    remote:
+      path: Models/DTOs/FilterSpecification.cs
+      branch: master
+      repo: https://github.com/waydxd/sample-cs-api-backend
+    id: Equals
+    path: Models/DTOs/FilterSpecification.cs
+    startLine: 17
+  assemblies:
+  - TodoApi
+  namespace: TodoApi.Models.DTOs
+  summary: Property equals the value.
+  example: []
+  syntax:
+    content: Equals = 0
+    return:
+      type: TodoApi.Models.DTOs.ComparisonOperator
+- uid: TodoApi.Models.DTOs.ComparisonOperator.NotEquals
+  commentId: F:TodoApi.Models.DTOs.ComparisonOperator.NotEquals
+  id: NotEquals
+  parent: TodoApi.Models.DTOs.ComparisonOperator
+  langs:
+  - csharp
+  - vb
+  name: NotEquals
+  nameWithType: ComparisonOperator.NotEquals
+  fullName: TodoApi.Models.DTOs.ComparisonOperator.NotEquals
+  type: Field
+  source:
+    remote:
+      path: Models/DTOs/FilterSpecification.cs
+      branch: master
+      repo: https://github.com/waydxd/sample-cs-api-backend
+    id: NotEquals
+    path: Models/DTOs/FilterSpecification.cs
+    startLine: 19
+  assemblies:
+  - TodoApi
+  namespace: TodoApi.Models.DTOs
+  summary: Property does not equal the value.
+  example: []
+  syntax:
+    content: NotEquals = 1
+    return:
+      type: TodoApi.Models.DTOs.ComparisonOperator
+- uid: TodoApi.Models.DTOs.ComparisonOperator.Contains
+  commentId: F:TodoApi.Models.DTOs.ComparisonOperator.Contains
+  id: Contains
+  parent: TodoApi.Models.DTOs.ComparisonOperator
+  langs:
+  - csharp
+  - vb
+  name: Contains
+  nameWithType: ComparisonOperator.Contains
+  fullName: TodoApi.Models.DTOs.ComparisonOperator.Contains
+  type: Field
+  source:
+    remote:
+      path: Models/DTOs/FilterSpecification.cs
+      branch: master
+      repo: https://github.com/waydxd/sample-cs-api-backend
+    id: Contains
+    path: Models/DTOs/FilterSpecification.cs
+    startLine: 21
+  assemblies:
+  - TodoApi
+  namespace: TodoApi.Models.DTOs
+  summary: String property contains the value.
+  example: []
+  syntax:
+    content: Contains = 2
+    return:
+      type: TodoApi.Models.DTOs.ComparisonOperator
+- uid: TodoApi.Models.DTOs.ComparisonOperator.GreaterThan
+  commentId: F:TodoApi.Models.DTOs.ComparisonOperator.GreaterThan
+  id: GreaterThan
+  parent: TodoApi.Models.DTOs.ComparisonOperator
+  langs:
+  - csharp
+  - vb
+  name: GreaterThan
+  nameWithType: ComparisonOperator.GreaterThan
+  fullName: TodoApi.Models.DTOs.ComparisonOperator.GreaterThan
+  type: Field
+  source:
+    remote:
+      path: Models/DTOs/FilterSpecification.cs
+      branch: master
+      repo: https://github.com/waydxd/sample-cs-api-backend
+    id: GreaterThan
+    path: Models/DTOs/FilterSpecification.cs
+    startLine: 23
+  assemblies:
+  - TodoApi
+  namespace: TodoApi.Models.DTOs
+  summary: Property is greater than the value.
+  example: []
+  syntax:
+    content: GreaterThan = 3
+    return:
+      type: TodoApi.Models.DTOs.ComparisonOperator
+- uid: TodoApi.Models.DTOs.ComparisonOperator.GreaterThanOrEqual
+  commentId: F:TodoApi.Models.DTOs.ComparisonOperator.GreaterThanOrEqual
+  id: GreaterThanOrEqual
+  parent: TodoApi.Models.DTOs.ComparisonOperator
+  langs:
+  - csharp
+  - vb
+  name: GreaterThanOrEqual
+  nameWithType: ComparisonOperator.GreaterThanOrEqual
+  fullName: TodoApi.Models.DTOs.ComparisonOperator.GreaterThanOrEqual
+  type: Field
+  source:
+    remote:
+      path: Models/DTOs/FilterSpecification.cs
+      branch: master
+      repo: https://github.com/waydxd/sample-cs-api-backend
+    id: GreaterThanOrEqual
+    path: Models/DTOs/FilterSpecification.cs
+    startLine: 25
+  assemblies:
+  - TodoApi
+  namespace: TodoApi.Models.DTOs
+  summary: Property is greater than or equal to the value.
+  example: []
+  syntax:
+    content: GreaterThanOrEqual = 4
+    return:
+      type: TodoApi.Models.DTOs.ComparisonOperator
+- uid: TodoApi.Models.DTOs.ComparisonOperator.LessThan
+  commentId: F:TodoApi.Models.DTOs.ComparisonOperator.LessThan
+  id: LessThan
+  parent: TodoApi.Models.DTOs.ComparisonOperator
+  langs:
+  - csharp
+  - vb
+  name: LessThan
+  nameWithType: ComparisonOperator.LessThan
+  fullName: TodoApi.Models.DTOs.ComparisonOperator.LessThan
+  type: Field
+  source:
+    remote:
+      path: Models/DTOs/FilterSpecification.cs
+      branch: master
+      repo: https://github.com/waydxd/sample-cs-api-backend
+    id: LessThan
+    path: Models/DTOs/FilterSpecification.cs
+    startLine: 27
+  assemblies:
+  - TodoApi
+  namespace: TodoApi.Models.DTOs
+  summary: Property is less than the value.
+  example: []
+  syntax:
+    content: LessThan = 5
+    return:
+      type: TodoApi.Models.DTOs.ComparisonOperator
+- uid: TodoApi.Models.DTOs.ComparisonOperator.LessThanOrEqual
+  commentId: F:TodoApi.Models.DTOs.ComparisonOperator.LessThanOrEqual
+  id: LessThanOrEqual
+  parent: TodoApi.Models.DTOs.ComparisonOperator
+  langs:
+  - csharp
+  - vb
+  name: LessThanOrEqual
+  nameWithType: ComparisonOperator.LessThanOrEqual
+  fullName: TodoApi.Models.DTOs.ComparisonOperator.LessThanOrEqual
+  type: Field
+  source:
+    remote:
+      path: Models/DTOs/FilterSpecification.cs
+      branch: master
+      repo: https://github.com/waydxd/sample-cs-api-backend
+    id: LessThanOrEqual
+    path: Models/DTOs/FilterSpecification.cs
+    startLine: 29
+  assemblies:
+  - TodoApi
+  namespace: TodoApi.Models.DTOs
+  summary: Property is less than or equal to the value.
+  example: []
+  syntax:
+    content: LessThanOrEqual = 6
+    return:
+      type: TodoApi.Models.DTOs.ComparisonOperator
+references:
+- uid: TodoApi.Models.DTOs
+  commentId: N:TodoApi.Models.DTOs
+  href: TodoApi.html
+  name: TodoApi.Models.DTOs
+  nameWithType: TodoApi.Models.DTOs
+  fullName: TodoApi.Models.DTOs
+  spec.csharp:
+  - uid: TodoApi
+    name: TodoApi
+    href: TodoApi.html
+  - name: .
+  - uid: TodoApi.Models
+    name: Models
+    href: TodoApi.Models.html
+  - name: .
+  - uid: TodoApi.Models.DTOs
+    name: DTOs
+    href: TodoApi.Models.DTOs.html
+  spec.vb:
+  - uid: TodoApi
+    name: TodoApi
+    href: TodoApi.html
+  - name: .
+  - uid: TodoApi.Models
+    name: Models
+    href: TodoApi.Models.html
+  - name: .
+  - uid: TodoApi.Models.DTOs
+    name: DTOs
+    href: TodoApi.Models.DTOs.html
+- uid: TodoApi.Models.DTOs.ComparisonOperator
+  commentId: T:TodoApi.Models.DTOs.ComparisonOperator
+  parent: TodoApi.Models.DTOs
+  href: TodoApi.Models.DTOs.ComparisonOperator.html
+  name: ComparisonOperator
+  nameWithType: ComparisonOperator
+  fullName: TodoApi.Models.DTOs.ComparisonOperator

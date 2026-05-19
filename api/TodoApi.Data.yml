@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: TodoApi.Data
+  commentId: N:TodoApi.Data
+  id: TodoApi.Data
+  children:
+  - TodoApi.Data.AppDbContext
+  langs:
+  - csharp
+  - vb
+  name: TodoApi.Data
+  nameWithType: TodoApi.Data
+  fullName: TodoApi.Data
+  type: Namespace
+  assemblies:
+  - TodoApi
+references:
+- uid: TodoApi.Data.AppDbContext
+  commentId: T:TodoApi.Data.AppDbContext
+  parent: TodoApi.Data
+  href: TodoApi.Data.AppDbContext.html
+  name: AppDbContext
+  nameWithType: AppDbContext
+  fullName: TodoApi.Data.AppDbContext
+- uid: TodoApi.Data
+  commentId: N:TodoApi.Data
+  href: TodoApi.html
+  name: TodoApi.Data
+  nameWithType: TodoApi.Data
+  fullName: TodoApi.Data
+  spec.csharp:
+  - uid: TodoApi
+    name: TodoApi
+    href: TodoApi.html
+  - name: .
+  - uid: TodoApi.Data
+    name: Data
+    href: TodoApi.Data.html
+  spec.vb:
+  - uid: TodoApi
+    name: TodoApi
+    href: TodoApi.html
+  - name: .
+  - uid: TodoApi.Data
+    name: Data
+    href: TodoApi.Data.html

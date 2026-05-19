@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: TodoApi.Models.DTOs.FilterOperator
+  commentId: T:TodoApi.Models.DTOs.FilterOperator
+  id: FilterOperator
+  parent: TodoApi.Models.DTOs
+  children:
+  - TodoApi.Models.DTOs.FilterOperator.And
+  - TodoApi.Models.DTOs.FilterOperator.Not
+  - TodoApi.Models.DTOs.FilterOperator.Or
+  langs:
+  - csharp
+  - vb
+  name: FilterOperator
+  nameWithType: FilterOperator
+  fullName: TodoApi.Models.DTOs.FilterOperator
+  type: Enum
+  source:
+    remote:
+      path: Models/DTOs/FilterSpecification.cs
+      branch: master
+      repo: https://github.com/waydxd/sample-cs-api-backend
+    id: FilterOperator
+    path: Models/DTOs/FilterSpecification.cs
+    startLine: 3
+  assemblies:
+  - TodoApi
+  namespace: TodoApi.Models.DTOs
+  summary: Logical operators for combining multiple filters or conditions.
+  example: []
+  syntax:
+    content: public enum FilterOperator
+    content.vb: Public Enum FilterOperator
+- uid: TodoApi.Models.DTOs.FilterOperator.And
+  commentId: F:TodoApi.Models.DTOs.FilterOperator.And
+  id: And
+  parent: TodoApi.Models.DTOs.FilterOperator
+  langs:
+  - csharp
+  - vb
+  name: And
+  nameWithType: FilterOperator.And
+  fullName: TodoApi.Models.DTOs.FilterOperator.And
+  type: Field
+  source:
+    remote:
+      path: Models/DTOs/FilterSpecification.cs
+      branch: master
+      repo: https://github.com/waydxd/sample-cs-api-backend
+    id: And
+    path: Models/DTOs/FilterSpecification.cs
+    startLine: 6
+  assemblies:
+  - TodoApi
+  namespace: TodoApi.Models.DTOs
+  summary: All nested filters/conditions must match (logical AND).
+  example: []
+  syntax:
+    content: And = 0
+    return:
+      type: TodoApi.Models.DTOs.FilterOperator
+- uid: TodoApi.Models.DTOs.FilterOperator.Or
+  commentId: F:TodoApi.Models.DTOs.FilterOperator.Or
+  id: Or
+  parent: TodoApi.Models.DTOs.FilterOperator
+  langs:
+  - csharp
+  - vb
+  name: Or
+  nameWithType: FilterOperator.Or
+  fullName: TodoApi.Models.DTOs.FilterOperator.Or
+  type: Field
+  source:
+    remote:
+      path: Models/DTOs/FilterSpecification.cs
+      branch: master
+      repo: https://github.com/waydxd/sample-cs-api-backend
+    id: Or
+    path: Models/DTOs/FilterSpecification.cs
+    startLine: 8
+  assemblies:
+  - TodoApi
+  namespace: TodoApi.Models.DTOs
+  summary: At least one nested filter/condition must match (logical OR).
+  example: []
+  syntax:
+    content: Or = 1
+    return:
+      type: TodoApi.Models.DTOs.FilterOperator
+- uid: TodoApi.Models.DTOs.FilterOperator.Not
+  commentId: F:TodoApi.Models.DTOs.FilterOperator.Not
+  id: Not
+  parent: TodoApi.Models.DTOs.FilterOperator
+  langs:
+  - csharp
+  - vb
+  name: Not
+  nameWithType: FilterOperator.Not
+  fullName: TodoApi.Models.DTOs.FilterOperator.Not
+  type: Field
+  source:
+    remote:
+      path: Models/DTOs/FilterSpecification.cs
+      branch: master
+      repo: https://github.com/waydxd/sample-cs-api-backend
+    id: Not
+    path: Models/DTOs/FilterSpecification.cs
+    startLine: 10
+  assemblies:
+  - TodoApi
+  namespace: TodoApi.Models.DTOs
+  summary: Negates the combined result of nested filters/conditions (logical NOT).
+  example: []
+  syntax:
+    content: Not = 2
+    return:
+      type: TodoApi.Models.DTOs.FilterOperator
+references:
+- uid: TodoApi.Models.DTOs
+  commentId: N:TodoApi.Models.DTOs
+  href: TodoApi.html
+  name: TodoApi.Models.DTOs
+  nameWithType: TodoApi.Models.DTOs
+  fullName: TodoApi.Models.DTOs
+  spec.csharp:
+  - uid: TodoApi
+    name: TodoApi
+    href: TodoApi.html
+  - name: .
+  - uid: TodoApi.Models
+    name: Models
+    href: TodoApi.Models.html
+  - name: .
+  - uid: TodoApi.Models.DTOs
+    name: DTOs
+    href: TodoApi.Models.DTOs.html
+  spec.vb:
+  - uid: TodoApi
+    name: TodoApi
+    href: TodoApi.html
+  - name: .
+  - uid: TodoApi.Models
+    name: Models
+    href: TodoApi.Models.html
+  - name: .
+  - uid: TodoApi.Models.DTOs
+    name: DTOs
+    href: TodoApi.Models.DTOs.html
+- uid: TodoApi.Models.DTOs.FilterOperator
+  commentId: T:TodoApi.Models.DTOs.FilterOperator
+  parent: TodoApi.Models.DTOs
+  href: TodoApi.Models.DTOs.FilterOperator.html
+  name: FilterOperator
+  nameWithType: FilterOperator
+  fullName: TodoApi.Models.DTOs.FilterOperator

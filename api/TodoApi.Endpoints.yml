@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: TodoApi.Endpoints
+  commentId: N:TodoApi.Endpoints
+  id: TodoApi.Endpoints
+  children:
+  - TodoApi.Endpoints.BookEndpoints
+  - TodoApi.Endpoints.TodoEndpoints
+  langs:
+  - csharp
+  - vb
+  name: TodoApi.Endpoints
+  nameWithType: TodoApi.Endpoints
+  fullName: TodoApi.Endpoints
+  type: Namespace
+  assemblies:
+  - TodoApi
+references:
+- uid: TodoApi.Endpoints.BookEndpoints
+  commentId: T:TodoApi.Endpoints.BookEndpoints
+  href: TodoApi.Endpoints.BookEndpoints.html
+  name: BookEndpoints
+  nameWithType: BookEndpoints
+  fullName: TodoApi.Endpoints.BookEndpoints
+- uid: TodoApi.Endpoints.TodoEndpoints
+  commentId: T:TodoApi.Endpoints.TodoEndpoints
+  href: TodoApi.Endpoints.TodoEndpoints.html
+  name: TodoEndpoints
+  nameWithType: TodoEndpoints
+  fullName: TodoApi.Endpoints.TodoEndpoints

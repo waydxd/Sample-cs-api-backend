@@ -3,6 +3,7 @@ using TodoApi.Models.DTOs;
 
 namespace TodoApi.Validators;
 
+/// <summary>Validates <see cref="CreateBookDto"/> before creating a new book.</summary>
 public class CreateBookDtoValidator : AbstractValidator<CreateBookDto>
 {
     public CreateBookDtoValidator()
@@ -25,7 +26,7 @@ public class CreateBookDtoValidator : AbstractValidator<CreateBookDto>
             .Must(name => !name.All(char.IsDigit)).WithMessage("Book name cannot consist entirely of numbers.");
     }
 
-    // Custom helper method for Country Code format
+    /// <summary>Validates that the country code consists only of uppercase letters (A-Z).</summary>
     private bool BeValidIsoCode(string countryCode)
     {
         if (string.IsNullOrEmpty(countryCode)) return false;

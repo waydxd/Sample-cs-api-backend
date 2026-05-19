@@ -1,0 +1,445 @@
+### YamlMime:ManagedReference
+items:
+- uid: TodoApi.Endpoints.BookEndpoints
+  commentId: T:TodoApi.Endpoints.BookEndpoints
+  id: BookEndpoints
+  parent: TodoApi.Endpoints
+  children:
+  - TodoApi.Endpoints.BookEndpoints.RegisterEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
+  langs:
+  - csharp
+  - vb
+  name: BookEndpoints
+  nameWithType: BookEndpoints
+  fullName: TodoApi.Endpoints.BookEndpoints
+  type: Class
+  source:
+    remote:
+      path: Endpoints/BookEndpoints.cs
+      branch: master
+      repo: https://github.com/waydxd/sample-cs-api-backend
+    id: BookEndpoints
+    path: Endpoints/BookEndpoints.cs
+    startLine: 11
+  assemblies:
+  - TodoApi
+  namespace: TodoApi.Endpoints
+  summary: Minimal API module for managing books under the /api/books route.
+  example: []
+  syntax:
+    content: 'public class BookEndpoints : IEndpointModule'
+    content.vb: Public Class BookEndpoints Implements IEndpointModule
+  inheritance:
+  - System.Object
+  implements:
+  - TodoApi.Extensions.IEndpointModule
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TodoApi.Endpoints.BookEndpoints.RegisterEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
+  commentId: M:TodoApi.Endpoints.BookEndpoints.RegisterEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
+  id: RegisterEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
+  parent: TodoApi.Endpoints.BookEndpoints
+  langs:
+  - csharp
+  - vb
+  name: RegisterEndpoints(IEndpointRouteBuilder)
+  nameWithType: BookEndpoints.RegisterEndpoints(IEndpointRouteBuilder)
+  fullName: TodoApi.Endpoints.BookEndpoints.RegisterEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
+  type: Method
+  source:
+    remote:
+      path: Endpoints/BookEndpoints.cs
+      branch: master
+      repo: https://github.com/waydxd/sample-cs-api-backend
+    id: RegisterEndpoints
+    path: Endpoints/BookEndpoints.cs
+    startLine: 13
+  assemblies:
+  - TodoApi
+  namespace: TodoApi.Endpoints
+  summary: Regroutes all API endpoints for this module.
+  example: []
+  syntax:
+    content: public void RegisterEndpoints(IEndpointRouteBuilder endpoints)
+    parameters:
+    - id: endpoints
+      type: Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+      description: The endpoint route builder.
+    content.vb: Public Sub RegisterEndpoints(endpoints As IEndpointRouteBuilder)
+  overload: TodoApi.Endpoints.BookEndpoints.RegisterEndpoints*
+  implements:
+  - TodoApi.Extensions.IEndpointModule.RegisterEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
+references:
+- uid: TodoApi.Endpoints
+  commentId: N:TodoApi.Endpoints
+  href: TodoApi.html
+  name: TodoApi.Endpoints
+  nameWithType: TodoApi.Endpoints
+  fullName: TodoApi.Endpoints
+  spec.csharp:
+  - uid: TodoApi
+    name: TodoApi
+    href: TodoApi.html
+  - name: .
+  - uid: TodoApi.Endpoints
+    name: Endpoints
+    href: TodoApi.Endpoints.html
+  spec.vb:
+  - uid: TodoApi
+    name: TodoApi
+    href: TodoApi.html
+  - name: .
+  - uid: TodoApi.Endpoints
+    name: Endpoints
+    href: TodoApi.Endpoints.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: TodoApi.Extensions.IEndpointModule
+  commentId: T:TodoApi.Extensions.IEndpointModule
+  parent: TodoApi.Extensions
+  href: TodoApi.Extensions.IEndpointModule.html
+  name: IEndpointModule
+  nameWithType: IEndpointModule
+  fullName: TodoApi.Extensions.IEndpointModule
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TodoApi.Extensions
+  commentId: N:TodoApi.Extensions
+  href: TodoApi.html
+  name: TodoApi.Extensions
+  nameWithType: TodoApi.Extensions
+  fullName: TodoApi.Extensions
+  spec.csharp:
+  - uid: TodoApi
+    name: TodoApi
+    href: TodoApi.html
+  - name: .
+  - uid: TodoApi.Extensions
+    name: Extensions
+    href: TodoApi.Extensions.html
+  spec.vb:
+  - uid: TodoApi
+    name: TodoApi
+    href: TodoApi.html
+  - name: .
+  - uid: TodoApi.Extensions
+    name: Extensions
+    href: TodoApi.Extensions.html
+- uid: TodoApi.Endpoints.BookEndpoints.RegisterEndpoints*
+  commentId: Overload:TodoApi.Endpoints.BookEndpoints.RegisterEndpoints
+  href: TodoApi.Endpoints.BookEndpoints.html#TodoApi_Endpoints_BookEndpoints_RegisterEndpoints_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_
+  name: RegisterEndpoints
+  nameWithType: BookEndpoints.RegisterEndpoints
+  fullName: TodoApi.Endpoints.BookEndpoints.RegisterEndpoints
+- uid: TodoApi.Extensions.IEndpointModule.RegisterEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
+  commentId: M:TodoApi.Extensions.IEndpointModule.RegisterEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
+  parent: TodoApi.Extensions.IEndpointModule
+  isExternal: true
+  href: TodoApi.Extensions.IEndpointModule.html#TodoApi_Extensions_IEndpointModule_RegisterEndpoints_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_
+  name: RegisterEndpoints(IEndpointRouteBuilder)
+  nameWithType: IEndpointModule.RegisterEndpoints(IEndpointRouteBuilder)
+  fullName: TodoApi.Extensions.IEndpointModule.RegisterEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
+  spec.csharp:
+  - uid: TodoApi.Extensions.IEndpointModule.RegisterEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
+    name: RegisterEndpoints
+    href: TodoApi.Extensions.IEndpointModule.html#TodoApi_Extensions_IEndpointModule_RegisterEndpoints_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_
+  - name: (
+  - uid: Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+    name: IEndpointRouteBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing.iendpointroutebuilder
+  - name: )
+  spec.vb:
+  - uid: TodoApi.Extensions.IEndpointModule.RegisterEndpoints(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)
+    name: RegisterEndpoints
+    href: TodoApi.Extensions.IEndpointModule.html#TodoApi_Extensions_IEndpointModule_RegisterEndpoints_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_
+  - name: (
+  - uid: Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+    name: IEndpointRouteBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing.iendpointroutebuilder
+  - name: )
+- uid: Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+  commentId: T:Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+  parent: Microsoft.AspNetCore.Routing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing.iendpointroutebuilder
+  name: IEndpointRouteBuilder
+  nameWithType: IEndpointRouteBuilder
+  fullName: Microsoft.AspNetCore.Routing.IEndpointRouteBuilder
+- uid: Microsoft.AspNetCore.Routing
+  commentId: N:Microsoft.AspNetCore.Routing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Routing
+  nameWithType: Microsoft.AspNetCore.Routing
+  fullName: Microsoft.AspNetCore.Routing
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Routing
+    name: Routing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Routing
+    name: Routing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing
