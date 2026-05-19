@@ -9,6 +9,7 @@
   <ItemGroup>
     <!-- This package is required to use Entity Framework Core and migration tools. -->
     <PackageReference Include="FluentValidation" Version="12.1.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.16 " />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.16 ">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

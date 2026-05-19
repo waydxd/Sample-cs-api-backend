@@ -4,6 +4,7 @@ using TodoApi.Extensions;
 using TodoApi.Models.DTOs;
 using TodoApi.Models.Entities;
 using FluentValidation;
+
 namespace TodoApi.Endpoints;
 
 public class BookEndpoints : IEndpointModule
@@ -14,28 +15,25 @@ public class BookEndpoints : IEndpointModule
 
         group.MapGet("/", GetBooksAsync);
         group.MapPost("/", CreateBookAsync);
+        group.MapPut("/{id:long}", UpdateBookAsync);
+        group.MapDelete("/{id:long}", DeleteBookAsync);
     }
 
     private static async Task<IResult> GetBooksAsync(AppDbContext db)
     {
-        var books = await db.Todos.AsNoTracking().ToListAsync();
+        var books = await db.Books.AsNoTracking().ToListAsync();
         return Results.Ok(books);
     }
 
     private static async Task<IResult> CreateBookAsync(
-        CreateBookDto dto, 
-        IValidator<CreateBookDto> validator, // Injected automatically
+        CreateBookDto dto,
+        IValidator<CreateBookDto> validator,
         AppDbContext db)
     {
-        // 1. Run Validation
         var validationResult = await validator.ValidateAsync(dto);
         if (!validationResult.IsValid)
-        {
-            // Returns a structured 400 Bad Request with all error messages
             return Results.ValidationProblem(validationResult.ToDictionary());
-        }
 
-        // 2. Map DTO to Entity if validation passes
         var book = new BookItem
         {
             CountryCode = dto.CountryCode,
@@ -46,35 +44,43 @@ public class BookEndpoints : IEndpointModule
 
         db.Books.Add(book);
         await db.SaveChangesAsync();
-        
+
         return Results.Created($"/books/{book.Id}", book);
     }
 
-        private static async Task<IResult> UpdateBookAsync(
-        CreateBookDto dto, 
-        IValidator<CreateBookDto> validator, // Injected automatically
+    private static async Task<IResult> UpdateBookAsync(
+        long id,
+        UpdateBookDto dto,
+        IValidator<UpdateBookDto> validator,
         AppDbContext db)
     {
-        // 1. Run Validation
         var validationResult = await validator.ValidateAsync(dto);
         if (!validationResult.IsValid)
-        {
-            // Returns a structured 400 Bad Request with all error messages
             return Results.ValidationProblem(validationResult.ToDictionary());
-        }
 
-        // 2. Map DTO to Entity if validation passes
-        var book = new BookItem
-        {
-            CountryCode = dto.CountryCode,
-            Category = dto.Category,
-            PublishDate = dto.PublishDate,
-            Name = dto.Name
-        };
+        var book = await db.Books.FindAsync(id);
+        if (book is null)
+            return Results.NotFound();
 
-        db.Books.Add(book);
+        book.CountryCode = dto.CountryCode;
+        book.Category = dto.Category;
+        book.PublishDate = dto.PublishDate;
+        book.Name = dto.Name;
+
         await db.SaveChangesAsync();
-        
-        return Results.Created($"/books/{book.Id}", book);
+
+        return Results.Ok(book);
+    }
+
+    private static async Task<IResult> DeleteBookAsync(long id, AppDbContext db)
+    {
+        var book = await db.Books.FindAsync(id);
+        if (book is null)
+            return Results.NotFound();
+
+        db.Books.Remove(book);
+        await db.SaveChangesAsync();
+
+        return Results.NoContent();
     }
 }

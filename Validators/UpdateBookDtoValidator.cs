@@ -3,9 +3,9 @@ using TodoApi.Models.DTOs;
 
 namespace TodoApi.Validators;
 
-public class CreateBookDtoValidator : AbstractValidator<CreateBookDto>
+public class UpdateBookDtoValidator : AbstractValidator<UpdateBookDto>
 {
-    public CreateBookDtoValidator()
+    public UpdateBookDtoValidator()
     {
         RuleFor(x => x.CountryCode)
             .NotEmpty().WithMessage("Country code is required.")
@@ -25,7 +25,6 @@ public class CreateBookDtoValidator : AbstractValidator<CreateBookDto>
             .Must(name => !name.All(char.IsDigit)).WithMessage("Book name cannot consist entirely of numbers.");
     }
 
-    // Custom helper method for Country Code format
     private bool BeValidIsoCode(string countryCode)
     {
         if (string.IsNullOrEmpty(countryCode)) return false;
