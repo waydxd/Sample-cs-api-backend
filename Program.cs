@@ -2,9 +2,10 @@ using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using TodoApi.Data;
 using TodoApi.Extensions;
+using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

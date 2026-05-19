@@ -9,6 +9,7 @@ public class AppDbContext : DbContext
 
     // Schema definitions
     public DbSet<TodoItem> Todos => Set<TodoItem>();
+    public DbSet<BookItem> Books => Set<BookItem>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
