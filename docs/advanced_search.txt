@@ -1,0 +1,18 @@
+{
+    "countryCode": "US",
+    "filter": {
+      "operator": "And",
+      "conditions": [
+        { "field": "Category", "operator": "GreaterThan", "value": "5" }
+      ],
+      "filters": [
+        {
+          "operator": "Or",
+          "conditions": [
+            { "field": "Name", "operator": "Contains", "value": "Harry" },
+            { "field": "CountryCode", "operator": "NotEquals", "value": "CA" }
+          ]
+        }
+      ]
+    }
+  }

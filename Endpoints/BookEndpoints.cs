@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 using TodoApi.Data;
 using TodoApi.Extensions;
@@ -98,10 +99,27 @@ public class BookEndpoints : IEndpointModule
     }
 
     private static async Task<IResult> SearchBooksPostAsync(
-        BookSearchRequest request,
-        IValidator<BookSearchRequest> validator,
+        HttpContext httpContext,
         AppDbContext db)
     {
+        BookSearchRequest? request;
+        try
+        {
+            request = await httpContext.Request.ReadFromJsonAsync<BookSearchRequest>();
+        }
+        catch (JsonException ex)
+        {
+            await Console.Error.WriteLineAsync($"[JSON Error] {ex.Message}");
+            return Results.Problem(
+                detail: ex.InnerException?.Message ?? ex.Message,
+                statusCode: 400,
+                title: "Invalid JSON");
+        }
+
+        if (request is null)
+            return Results.BadRequest(new { detail = "Request body cannot be empty." });
+
+        var validator = httpContext.RequestServices.GetRequiredService<IValidator<BookSearchRequest>>();
         var validationResult = await validator.ValidateAsync(request);
         if (!validationResult.IsValid)
             return Results.ValidationProblem(validationResult.ToDictionary());

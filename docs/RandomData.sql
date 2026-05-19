@@ -6,7 +6,7 @@ WITH RECURSIVE seq AS (
 )
 SELECT 
     -- Generates a random 2-letter country code (e.g., 'US', 'FR')
-    ELT(FLOOR(RAND() * 5) + 1, 'US', 'UK', 'CA', 'TW', 'CN', 'HK') AS CountryCode,
+    ELT(FLOOR(RAND() * 6) + 1, 'US', 'UK', 'CA', 'TW', 'CN', 'HK') AS CountryCode,
     
     -- Generates a random category ID between 1 and 10
     FLOOR(1 + RAND() * 10) AS Category,
